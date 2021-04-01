@@ -1,6 +1,19 @@
 
 
+import  db from './Firebase/Config';
 
-const mensaje = 'Hola Mundo!';
+const usuario = {
+    nombre: 'fernando',
+    activo: true,
+    fechaNaci: 0
+}
 
-console.log( mensaje );
+// insert into usuarios ....
+
+db.collection('usuarios')
+    .add( usuario )
+    .then(docRef => {
+        console.log(docRef)
+    }
+index.ts
+git commit -m "tercer vide",
